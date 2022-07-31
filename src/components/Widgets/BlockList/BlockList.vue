@@ -21,7 +21,8 @@ export default {
     data: {
       type: [ String, Array, BlockList ],
       default: new BlockList()
-    }
+    },
+
   },
   data () {
     return {
@@ -35,7 +36,7 @@ export default {
   computed: {
     blocksToShow () {
       return this.getBlocks(this.blocks)
-    }
+    },
   },
 
   watch: {

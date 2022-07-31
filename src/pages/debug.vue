@@ -36,14 +36,14 @@ export default {
                                 {
                                   widgets: [
                                     {
-                                      name: 'test-component2-widget',
+                                      name: 'test-component1-widget'
                                     }
                                   ]
                                 },
                                 {
                                   widgets: [
                                     {
-                                      name: 'test-component2-widget',
+                                      name: 'test-component2-widget'
                                     }
                                   ]
                                 }
@@ -64,13 +64,8 @@ export default {
                   {
                     widgets: [
                       {
-                        // here
-                        name: 'test-component2-widget'
-                      },
-                      {
-                        // here
                         name: 'test-component1-widget'
-                      },
+                      }
                     ]
                   },
                   {
@@ -240,7 +235,8 @@ export default {
   },
   computed: {
     calculateHeightStyle(){
-      return this.$store.getters['AppLayout/calculateContainerFullHeight'];
+      let calcHeight = this.$store.getters['AppLayout/calculateContainerFullHeight'];
+      return calcHeight;
     }
   },
   beforeRouteEnter() {
@@ -276,7 +272,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-html * {
-  color: white;
-}
 </style>
